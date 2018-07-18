@@ -84,13 +84,6 @@ vim：进入vim编辑器，如果后接文件名，则进入该文件的编辑模式
 ④.命令模式下输入quit不保存退出write保存不退出wq保存退出
 
 
-开启项目时需要命令
-NG=deviceMonitor npm run dev
-
-运行帮助文档
-npm run doc 
-
-ngsoc密码：Admin@123
 
 d3.selection 
 d3.geoPath 
