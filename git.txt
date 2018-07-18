@@ -1,0 +1,123 @@
+
+任务：创建仓库 拉代码 创建分支 切换分支 提交代码
+
+笔记：
+1、创建仓库:	mkdir test ：创建一个目录
+		cd test
+		git init
+
+		init之后 test就是一个空仓库，可以把想要加入该仓库的文件放在该test文件夹下面，然后再通过git add "文件名称".
+
+
+
+2、拉代码：在成功创建一个新仓库并且初始化之后，执行：
+	
+	git clone https://github.com/awayYestoday/vue-devtools.git
+
+3、创建分支：$ git branch testing
+
+	     你可以简单地使用 git log 命令查看各个分支当前所指的对象。 提供这一功能的参数是 --decorate
+	     $ git log --oneline --decorate
+
+
+4、切换分支：$ git checkout testing，切换分支之后head指针指向当前分支。注意：分支切换会改变工作目录中的文件。
+
+    如果需要创建并直接切换一个分支的话，使用如下语句：$git checkout -b testing
+
+
+5、分支合并：在主分支上执行命令 ---> $ git merge + 想要合并到主线的那个分支
+
+
+6、分支删除：（已经合并到主线上的分支就已经不再需要了，所以要对其进行删除）：$git branch -d  + 分支名称（test）
+
+
+5、提交代码：git commit -m + 提交时需要填写的message
+
+
+
+
+git命令：
+1、文件重命名：$ git mv file_from file_to
+
+2、查看提交历史：$ git log
+
+3、将暂存区中的文件提交：$ git commit --amend 如果自上次提交以来你还未做任何修改（例如，在上次提交后马上执行了此命令），那么快照会保持不变，而你所修改的只是提交信息：
+
+
+4、可以将所有状态为已更改的文件放入暂存区：git add*
+
+5、取消暂存的文件：$ git reset HEAD CONTRIBUTING.md
+
+6、查看远程仓库：$ git remote -v
+
+7、添加远程仓库：$ git remote add pb https://github.com/paulboone/ticgit
+
+8、从远程仓库中抓取与拉取：$ git fetch origin
+
+9、推送到远程仓库：$ git push origin master
+
+10、查看远程仓库：$ git remote show origin
+
+11、git列出已有标签：$ git tag
+
+12、查看git目前是在哪一个目录文件下执行：$ pwd
+
+13、创建一个目录：$ mkdir 目录名
+
+14、创建一个文件：$ touch 文件名
+
+15、查看当前分支列表：$ git branch
+
+16、删除文件：$ rm 文件名
+              $ git rm 文件名
+              
+
+
+快捷键：
+ctrl+c：退出log
+esc+ZZ:退出编译器
+
+vim：进入vim编辑器，如果后接文件名，则进入该文件的编辑模式
+①.vim编辑器中，按i进入编辑模式；
+②.按Esc回到锁定模式；
+③.锁定模式下按：进入命令模式；
+④.命令模式下输入quit不保存退出write保存不退出wq保存退出
+
+
+开启项目时需要命令
+NG=deviceMonitor npm run dev
+
+运行帮助文档
+npm run doc 
+
+ngsoc密码：Admin@123
+
+d3.selection 
+d3.geoPath 
+d3.geoMercator
+d3.projections
+geojson规范
+
+
+actions.js修改→store.js发现修改→getters.js渲染
+
+
+一、查看远程分支
+使用如下Git命令查看所有远程分支：
+
+git branch -r
+
+二、拉取远程分支并创建本地分支
+方法一
+使用如下命令：
+
+git checkout -b 本地分支名x origin/远程分支名x
+
+使用该方式会在本地新建分支x，并自动切换到该本地分支x。
+
+方式二
+使用如下命令：
+
+git fetch origin 远程分支名x:本地分支名x
+
+使用该方式会在本地新建分支x，但是不会自动切换到该本地分支x，需要手动checkout
